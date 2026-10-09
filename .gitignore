@@ -1,0 +1,13 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.spec
+build/
+
+# Do NOT ignore the floaty.exe binary as requested
+!floaty.exe
+!dist/floaty.exe
+
+# User personal note files created during runtime
+notes/*.txt
