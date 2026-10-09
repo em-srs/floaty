@@ -1,6 +1,20 @@
 # ✦ Floaty - Floating Desktop Note Bubble with Tabs
 
-> A lightweight, glowing floating desktop note-taking app for Windows built with Python & Tkinter. Features smooth easing animations, a modern glassmorphic dark theme, multi-tab editing, and a Home Dashboard grid.
+> A lightweight, glowing floating desktop note-taking app for Windows built with Python & Tkinter. Features smooth easing animations, a modern glassmorphic dark theme, multi-tab editing, a Home Dashboard grid, and a standard Windows Setup installer wizard (`FloatySetup.exe`).
+
+---
+
+## ⬇️ Installation for Windows Users
+
+### 🌟 Recommended: Download Installer (`FloatySetup.exe`)
+
+1. Download **[FloatySetup.exe](FloatySetup.exe)** from this repository or Releases.
+2. Double-click `FloatySetup.exe` and click **YES** on the Windows permission prompt.
+3. Follow the installation wizard. It will automatically:
+   - Install Floaty on your PC
+   - Create a **Start Menu Shortcut**
+   - Create a **Desktop Shortcut** (optional)
+   - Allow pinning directly to your **Windows Taskbar**
 
 ---
 
@@ -12,27 +26,6 @@
 - **Multi-Tab Editor (`✎ Editor`)**: Clean tabbed text notebook supporting instant tab switching, live word/character counts, and relative timestamping (`[HH:MM:SS]`).
 - **In-App Modal Dialogs**: Custom dark overlay dialogs for tab renaming and tab deletion (100% bug-free, zero window focus loss).
 - **Persistent Text Files**: Every tab corresponds to an actual `.txt` file automatically saved inside a local `notes/` directory. Auto-saved every 5 seconds.
-- **Standalone `.exe` Executable**: Includes pre-built single-file `floaty.exe` for running without needing Python installed.
-
----
-
-## 🚀 Quick Start & Installation
-
-### Option 1: Run Pre-Built Executable (`floaty.exe`)
-Download `floaty.exe` directly from the repository or `dist/` directory and double-click to launch on Windows.
-
-```powershell
-.\floaty.exe
-```
-
-### Option 2: Run via Python
-Requirements: Python 3.8+ (Tkinter included by default on Windows).
-
-```powershell
-git clone https://github.com/em-srs/floaty.git
-cd floaty
-python floaty.py
-```
 
 ---
 
@@ -50,16 +43,18 @@ python floaty.py
 
 ---
 
-## 🛠️ How to Build Executable (`.exe`)
+## 🛠️ How to Build from Source
 
-To package `floaty.py` into a single standalone `.exe` using PyInstaller:
-
+### 1. Build Single Executable with PyInstaller
 ```powershell
 pip install pyinstaller
 python -m PyInstaller --onefile --noconsole floaty.py
 ```
 
-The resulting executable will be placed in `dist/floaty.exe`.
+### 2. Compile Windows Installer Wizard with Inno Setup
+```powershell
+& "C:\Users\sunny\AppData\Local\Programs\Inno Setup 6\ISCC.exe" setup.iss
+```
 
 ---
 

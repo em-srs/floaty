@@ -5,9 +5,11 @@ __pycache__/
 *.spec
 build/
 
-# Do NOT ignore the floaty.exe binary as requested
+# Do NOT ignore binary executables as requested
 !floaty.exe
 !dist/floaty.exe
+!FloatySetup.exe
+!Output/FloatySetup.exe
 
 # User personal note files created during runtime
 notes/*.txt
